@@ -7,7 +7,7 @@ export const index = (async () => {
     render(
       (
         <div>
-          <div>Hello from the host</div>
+          <div>Hello from the host4</div>
           <Hello></Hello>
         </div>
       ),

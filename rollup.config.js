@@ -6,6 +6,8 @@ import html from '@rollup/plugin-html';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import copy from 'rollup-plugin-copy'
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 const dir = __dirname;
 
@@ -41,6 +43,8 @@ const config = {
        .replace(
             'main.tsx', 'main.js')
     }),
+    serve('dist'),
+    livereload('dist'),
     babel({
       babelHelpers: 'bundled',
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx'],
